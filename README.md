@@ -99,6 +99,9 @@ You can also modify the encryptor configuration.
     <stringOutputType>base64</stringOutputType>
 </configuration>
 ```
+
+The default values can be found [here](https://github.com/jonas-haeusler/jasypt-maven-plugin/blob/20b5c1bd2d93040e50dbe606c450592fece0ecba/src/main/java/dev/haeusler/mojo/AbstractJasyptMojo.java#L10-L58).
+
 ### jasypt:encrypt
 ```shell
 $ mvn jasypt:encrypt -DjasyptEncryptorPassword="passw0rd" -DdecryptedValue="my-secret"
@@ -106,9 +109,25 @@ $ mvn jasypt:encrypt -DjasyptEncryptorPassword="passw0rd" -DdecryptedValue="my-s
 ENC(eQ7ox25GWN4bO4Q4oMfyXnk6Y1VZjMuq/k4bEByOjXsUT8nXUE03zHwlnUEgBGNh)
 ```
 
+or as standalone (without a Maven project):
+
+```shell
+$ mvn dev.haeusler:jasypt-maven-plugin:1.0:encrypt -DjasyptEncryptorPassword="passw0rd" -DdecryptedValue="my-secret"
+
+ENC(BOHWcke3H8avQefTzQLFtpIR2lYYhL5M2Ohm/1ZQo3I6VddX6Ie8OjicBIcSjLIT)
+```
+
 ### jasypt:decrypt
 ```shell
-$ mvn jasypt:decrypt -DjasyptEncryptorPassword="passw0rd" -encryptedValue="ENC(eQ7ox25GWN4bO4Q4oMfyXnk6Y1VZjMuq/k4bEByOjXsUT8nXUE03zHwlnUEgBGNh)"
+$ mvn jasypt:decrypt -DjasyptEncryptorPassword="passw0rd" -DencryptedValue="ENC(eQ7ox25GWN4bO4Q4oMfyXnk6Y1VZjMuq/k4bEByOjXsUT8nXUE03zHwlnUEgBGNh)"
+
+my-secret
+```
+
+or as standalone (without a Maven project):
+
+```shell
+$ mvn dev.haeusler:jasypt-maven-plugin:1.0:decrypt -DjasyptEncryptorPassword="passw0rd" -DencryptedValue="ENC(BOHWcke3H8avQefTzQLFtpIR2lYYhL5M2Ohm/1ZQo3I6VddX6Ie8OjicBIcSjLIT)"
 
 my-secret
 ```
