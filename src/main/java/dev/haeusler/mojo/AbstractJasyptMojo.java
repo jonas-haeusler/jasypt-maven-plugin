@@ -13,38 +13,38 @@ abstract class AbstractJasyptMojo extends AbstractMojo {
      * This algorithm has to be supported by your JCE provider and, if this provider supports it, you can also
      * specify <i>mode</i> and <i>padding</i> for it, like ALGORITHM/MODE/PADDING.
      */
-    @Parameter(defaultValue = "PBEWithHMACSHA512AndAES_256")
+    @Parameter(property = "algorithm", defaultValue = "PBEWithHMACSHA512AndAES_256")
     private String algorithm = "PBEWithHMACSHA512AndAES_256";
 
     /**
      * Sets the size of the pool of encryptors to be created.
      */
-    @Parameter(defaultValue = "2")
+    @Parameter(property = "poolSize", defaultValue = "2")
     private int poolSize = 2;
 
     /**
      * Sets the number of hashing iterations applied to obtain the encryption key.
      */
-    @Parameter(defaultValue = "100000")
+    @Parameter(property = "keyObtentionIteration", defaultValue = "100000")
     private int keyObtentionIteration = 100_000;
 
     /**
      * Sets the security provider to be used for obtaining the encryption algorithm.
      * The provider does not have to be registered beforehand, and its use will not result in its being registered.
      */
-    @Parameter
+    @Parameter(property = "providerClassName")
     private String providerClassName = null;
 
     /**
      * Sets the salt generator to be used.
      */
-    @Parameter(defaultValue = "org.jasypt.salt.RandomSaltGenerator")
+    @Parameter(property = "saltGeneratorClassName", defaultValue = "org.jasypt.salt.RandomSaltGenerator")
     private String saltGeneratorClassName = "org.jasypt.salt.RandomSaltGenerator";
 
     /**
      * Sets the IV generator to be used.
      */
-    @Parameter(defaultValue = "org.jasypt.iv.RandomIvGenerator")
+    @Parameter(property = "ivGeneratorClassName", defaultValue = "org.jasypt.iv.RandomIvGenerator")
     private String ivGeneratorClassName = "org.jasypt.iv.RandomIvGenerator";
 
     /**
@@ -54,7 +54,7 @@ abstract class AbstractJasyptMojo extends AbstractMojo {
      *     <li>hexadecimal</li>
      * </ul>
      */
-    @Parameter(defaultValue = "base64")
+    @Parameter(property = "stringOutputType", defaultValue = "base64")
     private String stringOutputType = "base64";
 
     protected PooledPBEStringEncryptor buildEncryptor() {
