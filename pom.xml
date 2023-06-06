@@ -62,7 +62,7 @@
         <pomchecker-maven-plugin.version>1.9.0</pomchecker-maven-plugin.version>
         <maven-surefire-plugin.version>3.1.0</maven-surefire-plugin.version>
         <nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
-        <maven-release-plugin.version>3.0.0</maven-release-plugin.version>
+        <maven-release-plugin.version>3.0.1</maven-release-plugin.version>
         <maven-plugin-plugin.version>3.8.2</maven-plugin-plugin.version>
         <mockito.version>5.3.1</mockito.version>
     </properties>
