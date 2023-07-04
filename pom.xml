@@ -64,7 +64,7 @@
         <nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
         <maven-release-plugin.version>3.0.0</maven-release-plugin.version>
         <maven-plugin-plugin.version>3.8.2</maven-plugin-plugin.version>
-        <mockito.version>5.3.1</mockito.version>
+        <mockito.version>5.4.0</mockito.version>
     </properties>
 
     <build>
