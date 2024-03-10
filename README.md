@@ -97,6 +97,9 @@ You can also modify the encryptor configuration.
     <saltGeneratorClassName>org.jasypt.salt.RandomSaltGenerator</saltGeneratorClassName>
     <ivGeneratorClassName>org.jasypt.iv.RandomIvGenerator</ivGeneratorClassName>
     <stringOutputType>base64</stringOutputType>
+    
+    <!-- optionally enable logging of the decrypted values -->
+    <logDecryptedValues>true</logDecryptedValues>
 </configuration>
 ```
 
