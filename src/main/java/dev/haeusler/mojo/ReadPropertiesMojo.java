@@ -93,6 +93,12 @@ public class ReadPropertiesMojo extends AbstractJasyptMojo {
     private String keyPrefix = null;
 
     /**
+     * If the plugin should log all decrypted values
+     */
+    @Parameter(defaultValue = "false")
+    private boolean logDecryptedValues = false;
+
+    /**
      * @param files The files to set for tests.
      */
     public void setFiles(File[] files) {
@@ -222,7 +228,9 @@ public class ReadPropertiesMojo extends AbstractJasyptMojo {
             if (PropertyValueEncryptionUtils.isEncryptedValue(p)) {
                 final String value = PropertyValueEncryptionUtils.decrypt(p, encryptor);
                 projectProperties.setProperty(k, value);
-                getLog().info("decrypted property " + p + " to value " + value);
+                if (logDecryptedValues) {
+                    getLog().info("decrypted property " + p + " to value " + value);
+                }
             }
         }
     }
