@@ -95,8 +95,8 @@ public class ReadPropertiesMojo extends AbstractJasyptMojo {
     /**
      * If the plugin should log all decrypted values
      */
-    @Parameter(defaultValue = "true")
-    private boolean logDecryptedValues = true;
+    @Parameter(defaultValue = "false")
+    private boolean logDecryptedValues = false;
 
     /**
      * @param files The files to set for tests.
