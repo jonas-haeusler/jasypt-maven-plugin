@@ -39,7 +39,7 @@ The `jasypt:read-project-properties` goal reads property files or URLs and store
       <plugin>
         <groupId>dev.haeusler</groupId>
         <artifactId>jasypt-maven-plugin</artifactId>
-        <version>1.0</version>
+        <version>1.2</version>
         <executions>
           <execution>
             <phase>initialize</phase>
@@ -66,7 +66,7 @@ or alternatively
       <plugin>
         <groupId>dev.haeusler</groupId>
         <artifactId>jasypt-maven-plugin</artifactId>
-        <version>1.0</version>
+        <version>1.2</version>
         <executions>
           <execution>
             <phase>initialize</phase>
@@ -115,7 +115,7 @@ ENC(eQ7ox25GWN4bO4Q4oMfyXnk6Y1VZjMuq/k4bEByOjXsUT8nXUE03zHwlnUEgBGNh)
 or as standalone (without a Maven project):
 
 ```shell
-$ mvn dev.haeusler:jasypt-maven-plugin:1.0:encrypt -DjasyptEncryptorPassword="passw0rd" -DdecryptedValue="my-secret"
+$ mvn dev.haeusler:jasypt-maven-plugin:1.2:encrypt -DjasyptEncryptorPassword="passw0rd" -DdecryptedValue="my-secret"
 
 ENC(BOHWcke3H8avQefTzQLFtpIR2lYYhL5M2Ohm/1ZQo3I6VddX6Ie8OjicBIcSjLIT)
 ```
@@ -130,7 +130,7 @@ my-secret
 or as standalone (without a Maven project):
 
 ```shell
-$ mvn dev.haeusler:jasypt-maven-plugin:1.0:decrypt -DjasyptEncryptorPassword="passw0rd" -DencryptedValue="ENC(BOHWcke3H8avQefTzQLFtpIR2lYYhL5M2Ohm/1ZQo3I6VddX6Ie8OjicBIcSjLIT)"
+$ mvn dev.haeusler:jasypt-maven-plugin:1.2:decrypt -DjasyptEncryptorPassword="passw0rd" -DencryptedValue="ENC(BOHWcke3H8avQefTzQLFtpIR2lYYhL5M2Ohm/1ZQo3I6VddX6Ie8OjicBIcSjLIT)"
 
 my-secret
 ```
