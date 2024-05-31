@@ -57,7 +57,7 @@
         <jasypt.version>1.9.3</jasypt.version>
         <junit-jupiter-engine.version>5.10.2</junit-jupiter-engine.version>
         <maven-gpg-plugin.version>3.2.4</maven-gpg-plugin.version>
-        <maven-javadoc-plugin.version>3.6.3</maven-javadoc-plugin.version>
+        <maven-javadoc-plugin.version>3.7.0</maven-javadoc-plugin.version>
         <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
         <pomchecker-maven-plugin.version>1.11.0</pomchecker-maven-plugin.version>
         <maven-surefire-plugin.version>3.2.5</maven-surefire-plugin.version>
