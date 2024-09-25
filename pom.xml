@@ -55,7 +55,7 @@
         <maven-plugin-annotations.version>3.15.0</maven-plugin-annotations.version>
         <maven-plugin-api.version>3.9.9</maven-plugin-api.version>
         <jasypt.version>1.9.3</jasypt.version>
-        <junit-jupiter-engine.version>5.11.0</junit-jupiter-engine.version>
+        <junit-jupiter-engine.version>5.11.1</junit-jupiter-engine.version>
         <maven-gpg-plugin.version>3.2.6</maven-gpg-plugin.version>
         <maven-javadoc-plugin.version>3.10.0</maven-javadoc-plugin.version>
         <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
